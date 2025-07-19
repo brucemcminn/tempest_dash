@@ -1,8 +1,12 @@
+# This script creates a .csv file for testing Power BI
+from dotenv import load_dotenv
+import os
 import requests
 
-# Replace with your actual token
-API_KEY = "your_tempest_token_here"
-DEVICE_ID = "265233"
+load_dotenv()
+
+API_KEY = os.getenv("API_KEY")
+DEVICE_ID = os.getenv("DEVICE_ID")
 TIME_START = 1750662060
 TIME_END = 1750921260
 
