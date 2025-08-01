@@ -1,5 +1,5 @@
 .env
 __pycache__/
 *.pyc
-tempest_data_*.csv
+*.csv
 *.pbix
