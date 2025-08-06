@@ -1,3 +1,7 @@
+# This script executes a GET on the Tempest API and
+# loads historical weather data to an S3 bucket.
+# August 5, 2025
+
 from dotenv import load_dotenv
 from datetime import datetime, timedelta, timezone
 import os

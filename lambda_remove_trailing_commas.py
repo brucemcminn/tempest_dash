@@ -1,3 +1,5 @@
+### This script is part of a Lambda function in AWS that removes the trailing commas from lines in
+### a .csv file. The Lambda triggers when files are written to a /raw folder and output to /clean
 
 import boto3
 import os
