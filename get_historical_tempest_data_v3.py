@@ -15,7 +15,7 @@ S3_BUCKET = os.getenv("S3_BUCKET")
 S3_PREFIX = os.getenv("S3_PREFIX")
 
 # Set date range
-start_date = datetime(2025, 1, 1, tzinfo=timezone.utc)
+start_date = datetime(2023, 5, 1, tzinfo=timezone.utc)
 end_date = datetime.now(timezone.utc)
 chunk_duration = timedelta(days=5)
 current_start = start_date
