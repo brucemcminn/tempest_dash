@@ -17,19 +17,14 @@ def lambda_handler(event, context):
     THROTTLE_SECONDS = 4                   # Seconds between uploads to S3
 
     # === LOAD ENV VARS ===
-    load_dotenv()
     API_KEY = os.getenv("API_KEY")
     DEVICE_ID = os.getenv("DEVICE_ID")
-    AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
-    AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
     S3_BUCKET = os.getenv("S3_BUCKET")
     S3_PREFIX = os.getenv("S3_PREFIX")  # e.g., "historic_data/raw/"
 
     # === INIT S3 ===
     s3 = boto3.client(
-        "s3",
-        aws_access_key_id=AWS_ACCESS_KEY_ID,
-        aws_secret_access_key=AWS_SECRET_ACCESS_KEY
+        "s3"
     )
 
     # === DETERMINE START/END DATES ===
